@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<nav>
+  <h1>🔥 Firebase App</h1>
+  <div>
+    <button id="loginBtn" class="login">Login</button>
+    <button id="signupBtn" class="signup">Signup</button>
+  </div>
+</nav>
+
+<div class="card">
+  <h2>Login / Signup</h2>
+
+  <input id="email" type="email" placeholder="Email">
+  <input id="password" type="password" placeholder="Password">
+
+  <button onclick="login()">Login</button>
+  <button onclick="signup()">Sign Up</button>
+  <button class="google" onclick="googleLogin()">Google Login</button>
+
+  <p id="error" class="error"></p>
+</div>
+
+<script type="module" src="js/firebase.js"></script>
+<script type="module" src="js/auth.js"></script>
+<script type="module" src="js/navbar.js"></script>
+
+</body>
+</html>
