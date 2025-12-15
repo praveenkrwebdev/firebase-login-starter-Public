@@ -1,4 +1,5 @@
 import { auth } from "./firebase.js";
+import { getAuth, sendPasswordResetEmail } from "firebase/auth";
 import {
   signInWithEmailAndPassword,
   createUserWithEmailAndPassword,
@@ -60,3 +61,26 @@ onAuthStateChanged(auth, user => {
     window.location.href = "login.html";
   }
 });
+
+
+const auth = getAuth();
+
+window.resetPassword = async function () {
+  const email = document.getElementById("email").value.trim();
+  const errorEl = document.getElementById("error");
+
+  if (!email) {
+    errorEl.textContent = "Please enter your email address first.";
+    return;
+  }
+
+  try {
+    await sendPasswordResetEmail(auth, email);
+    errorEl.style.color = "#22c55e";
+    errorEl.textContent =
+      "Password reset email sent. Please check your inbox.";
+  } catch (err) {
+    errorEl.style.color = "#ef4444";
+    errorEl.textContent = err.message;
+  }
+};
