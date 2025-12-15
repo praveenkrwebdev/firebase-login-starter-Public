@@ -60,10 +60,3 @@ onAuthStateChanged(auth, user => {
     window.location.href = "login.html";
   }
 });
-
-
-    errorEl.textContent = err.message;
-  }
-};
-
-is this correct?
