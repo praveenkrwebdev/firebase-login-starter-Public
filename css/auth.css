@@ -130,12 +130,14 @@ button.google {
 }
 
 .toggle-password svg {
-  width: 20px;
-  height: 20px;
+  width: 22px;
+  height: 22px;
   stroke: rgba(0,0,0,0.6);
   fill: none;
   stroke-width: 2;
+  pointer-events: none;
 }
+
 
 .toggle-password:hover svg {
   stroke: rgba(0,0,0,0.9);
