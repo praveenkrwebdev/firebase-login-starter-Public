@@ -112,21 +112,31 @@ button.google {
 
 .password-wrapper input {
   width: 100%;
-  padding-right: 42px; /* space for eye icon */
+  padding-right: 46px; /* space for eye */
 }
 
 .toggle-password {
   position: absolute;
-  right: 12px;
+  right: 14px;
   top: 50%;
   transform: translateY(-50%);
+  background: none;
+  border: none;
+  padding: 0;
   cursor: pointer;
-  font-size: 18px;
-  opacity: 0.6;
-  user-select: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.toggle-password:hover {
-  opacity: 1;
+.toggle-password svg {
+  width: 20px;
+  height: 20px;
+  fill: rgba(0, 0, 0, 0.45);
 }
+
+.toggle-password:hover svg {
+  fill: rgba(0, 0, 0, 0.75);
+}
+
 
